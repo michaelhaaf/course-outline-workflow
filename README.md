@@ -1,25 +1,47 @@
-# Results and Prospects: Using pandoc to convert markdown to .docx and Back Again
-
-Document conversion workflow between Open Office XML (.docx) and Markdown (.md) and vice versa, applied to the 5A6-F22/23 course outline update in Fall 2023.
+---
+author: Michael Haaf
+title: Converting .docx to markdown and Back Again
+date: August 17, 2023
+---
 
 ## Overview
 
+Document conversion workflow between Open Office XML (.docx) and Markdown (.md) and vice versa, applied to the 5A6-F22/23 course outline update in Fall 2023.
+
 ### the problem
 
-#### background reading
+- It is difficult to view course outline changes in Microsoft Teams
+- Offline editing hard
+- Complicated file format, vendor-lock-in 
+
+### big picture solutions
+
+- Content vs format
+- Draft vs publication
+- What file formats support our goals?
+- What tools do we want to use?
+- What frameworks are available for collaborative editting?
+
+### a proposal
+
+- Write course outline in any format (markdown or .docx)
+- Convert proposal to markdown
+- Propose changes in Pull Request
+- Assess/evaluate changes in Pull Request comments
+- Publish final course outline in PDF
+
+### background reading
 
 - ["Markdown: Syntax" by John Gruber](https://daringfireball.net/projects/markdown/syntax): A succinct overview of both the **how** and the **why** of Markdown.
 - [CommonMark](https://commonmark.org/): Brief history and overview of Markdown, also a proposed specification of Markdown.
 
-#### docx
+## Demonstration
 
-#### markdown
+Let's try this plan out!
 
-#### alternatives
+### setup
 
-- 
-
-### the solution
+There aren't many requirements:
 
 #### pandoc
 
@@ -39,12 +61,8 @@ There are many. A short list:
 
 - Dinguses
     - https://spec.commonmark.org/dingus/
-    - 
 
-
-## Demo
-
-### Convert to md
+### convert to md
 
 ```bash
 > pandoc --standalone FALL2022.COMPUTERSCIENCE.420-5A6-AB.LARCOG.docx --output FALL2022.COMPUTERSCIENCE.420-5A6-AB.LARCOG.md
